@@ -1,0 +1,95 @@
+# This project was generated with 0.3.15 using template: https://github.com/beeware/briefcase-template@v0.3.15
+[tool.briefcase]
+project_name = "Endless Battle"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/endlessbattle"
+license = "Proprietary"
+author = "Piper Thunstrom"
+author_email = "pathunstrom@gmail.com"
+
+[tool.briefcase.app.endlessbattle]
+formal_name = "Endless Battle"
+description = "A tiny rogue-like shooter based on Destiny's Deep Dive activity."
+long_description = """More details about the app should go here.
+"""
+icon = "src/endlessbattle/resources/endlessbattle"
+sources = [
+    "src/endlessbattle",
+]
+test_sources = [
+    "tests",
+]
+
+requires = [
+    "ppb~=1.1",
+    "pysdl2-dll==2.0.20",
+    "git+https://github.com/pathunstrom/splash-pathunstrom.git"
+]
+
+test_requires = [
+    "pytest",
+]
+
+[tool.briefcase.app.endlessbattle.macOS]
+requires = [
+    "std-nslog~=1.0.0"
+]
+
+[tool.briefcase.app.endlessbattle.linux]
+requires = [
+]
+
+[tool.briefcase.app.endlessbattle.linux.system.debian]
+system_requires = [
+# ?? FIXME
+]
+
+system_runtime_requires = [
+# ?? FIXME
+]
+
+[tool.briefcase.app.endlessbattle.linux.system.rhel]
+system_requires = [
+# ?? FIXME
+]
+
+system_runtime_requires = [
+# ?? FIXME
+]
+
+[tool.briefcase.app.endlessbattle.linux.system.arch]
+system_requires = [
+# ?? FIXME
+]
+
+system_runtime_requires = [
+# ?? FIXME
+]
+
+[tool.briefcase.app.endlessbattle.linux.appimage]
+manylinux = "manylinux2014"
+
+system_requires = [
+# ?? FIXME
+]
+linuxdeploy_plugins = []
+
+[tool.briefcase.app.endlessbattle.linux.flatpak]
+flatpak_runtime = "org.freedesktop.Platform"
+flatpak_runtime_version = "22.08"
+flatpak_sdk = "org.freedesktop.Sdk"
+
+[tool.briefcase.app.endlessbattle.windows]
+requires = []
+
+# Mobile deployments
+[tool.briefcase.app.endlessbattle.iOS]
+supported = false
+
+[tool.briefcase.app.endlessbattle.android]
+supported = false
+
+# Web deployments
+[tool.briefcase.app.endlessbattle.web]
+supported = false
